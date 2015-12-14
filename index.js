@@ -36,14 +36,13 @@ for (let i = 0; curDate.isBefore(endDate); i++) {
   curDate = curDate.add(1, 'days');
 }
 
-const output = templates.month.render(
+const output = templates['month'].render(
   {
     month: startDate.format('MMMM'),
     weeks: calendar
   },
   {
-    week: templates['week'],
-    day: templates['day']
+    week: templates['week']
   }
 );
 
